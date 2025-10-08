@@ -1,0 +1,45 @@
+# React Client .dockerignore
+# Purpose: Exclude unnecessary files from Docker image build context
+
+# Node dependencies (installed inside container)
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output (generated inside Docker during build step)
+build/
+
+# Environment files (never include secrets in the image)
+.env
+.env.local
+.env.development
+.env.production
+
+# Test and coverage reports
+coverage/
+*.spec.js
+*.test.js
+
+# Local config and caches
+.vscode/
+.idea/
+.cache/
+*.swp
+*.bak
+*.tmp
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Git and Docker metadata
+.git
+.gitignore
+.dockerignore
+Dockerfile
+
+# README and documentation (not needed in image)
+README.md
+LICENSE

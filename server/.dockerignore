@@ -1,0 +1,53 @@
+# Express Server .dockerignore
+# Purpose: Keep the Docker image lightweight and secure
+
+
+# Node dependencies (installed fresh in container)
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment and secrets
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs and temp files
+logs/
+*.log
+tmp/
+*.tmp
+
+# Test and coverage output
+coverage/
+__tests__/
+*.spec.js
+*.test.js
+
+# Build artifacts (if you transpile or bundle)
+dist/
+build/
+
+# IDE and editor configs
+.vscode/
+.idea/
+*.swp
+*.bak
+*.sublime-workspace
+*.sublime-project
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Git and Docker metadata
+.git
+.gitignore
+.dockerignore
+Dockerfile
+
+# Docs and miscellaneous
+README.md
+LICENSE
