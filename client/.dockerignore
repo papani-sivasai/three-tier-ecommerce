@@ -10,7 +10,7 @@ yarn-error.log*
 # Build output (generated inside Docker during build step)
 build/
 
-# Environment files (never include secrets in the image)
+# Environment and secrets
 .env
 .env.local
 .env.development

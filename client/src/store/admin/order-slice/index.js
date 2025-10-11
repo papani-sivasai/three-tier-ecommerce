@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import apiUrl from "../../../config/api";
 
 const initialState = {
   orderList: [],
@@ -9,9 +10,7 @@ const initialState = {
 export const getAllOrdersForAdmin = createAsyncThunk(
   "/order/getAllOrdersForAdmin",
   async () => {
-    const response = await axios.get(
-      `${import.meta.env.VITE_API_BASE_URL}/api/admin/orders/get`
-    );
+    const response = await axios.get(apiUrl('/api/admin/orders/get'));
 
     return response.data;
   }
@@ -20,9 +19,7 @@ export const getAllOrdersForAdmin = createAsyncThunk(
 export const getOrderDetailsForAdmin = createAsyncThunk(
   "/order/getOrderDetailsForAdmin",
   async (id) => {
-    const response = await axios.get(
-      `${import.meta.env.VITE_API_BASE_URL}/api/admin/orders/details/${id}`
-    );
+    const response = await axios.get(apiUrl(`/api/admin/orders/details/${id}`));
 
     return response.data;
   }
@@ -31,12 +28,9 @@ export const getOrderDetailsForAdmin = createAsyncThunk(
 export const updateOrderStatus = createAsyncThunk(
   "/order/updateOrderStatus",
   async ({ id, orderStatus }) => {
-    const response = await axios.put(
-      `${import.meta.env.VITE_API_BASE_URL}/api/admin/orders/update/${id}`,
-      {
-        orderStatus,
-      }
-    );
+    const response = await axios.put(apiUrl(`/api/admin/orders/update/${id}`), {
+      orderStatus,
+    });
 
     return response.data;
   }
