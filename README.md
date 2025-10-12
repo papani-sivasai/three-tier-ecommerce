@@ -81,25 +81,18 @@ A full-stack e-commerce application built with the MERN stack (MongoDB, Express.
    
    **Client `.env`:**
    ```
-   VITE_API_URL=http://localhost:5000
-   VITE_NODE_ENV=development
+   CLIENT_URL=http://localhost:5173
+   VITE_API_BASE_URL=/api
+   VITE_NODE_ENV=production
    ```
 
 ### Running the Application
 
 1. **Start the server**
    ```bash
-   cd server
-   npm start
+   docker compose up -d --build
    ```
-   Server runs on http://localhost:5000
-
-2. **Start the client**
-   ```bash
-   cd client
-   npm run dev
-   ```
-   Client runs on http://localhost:5173
+   Application runs on http://localhost:5000
 
 ### Creating Admin Users
 
