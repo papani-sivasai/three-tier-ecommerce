@@ -92,7 +92,7 @@ A full-stack e-commerce application built with the MERN stack (MongoDB, Express.
    ```bash
    docker compose up -d --build
    ```
-   Application runs on http://localhost:5000
+   Application runs on http://localhost
 
 ### Creating Admin Users
 
